@@ -39,7 +39,7 @@ app.get("/contacts", function(req, res) {
 });
 
 app.post('/contacts', (req, res) => {
-
+    // var name_temp=req.body.name.substring(0,20);
     Contact.create({
       name:req.body.name,
       phone:req.body.phone
@@ -63,7 +63,7 @@ app.post('/contacts', (req, res) => {
       //find the contact in the database using id and delete
       Contact.findByIdAndDelete(id,function(err){
         if(err){
-          console.log('error is deleting an object from databse');
+          console.log('error deleting object from databse');
           return;
         }
         return  res.redirect('/contacts');

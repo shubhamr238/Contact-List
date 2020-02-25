@@ -15,27 +15,45 @@
         My Contacts List
     </h1>
     <div id="contact-list-container">
+
+        <!-- <table>
+            <tbody>
+                <% for(let i of contact_list){ %>
+                    <tr>
+                        <td><%= i.name %></td>
+                        <td class="right"><%=i.phone %></td>
+                        <td class="right">
+                            <form action="/contacts/<%= i.id %>?_method=DELETE" method="POST">
+                                <button><i class="fas fa-window-close"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table> -->
         <ul>
             <% for(let i of contact_list){ %>
                 <li class="contact">
-                    <div class=details>
-                    <p><%= i.name %></p>
-                    <p><%=i.phone %></p>
-                </div>
-                <div class="delete-button">
-                    <form action="/contacts/<%= i.id %>?_method=DELETE" method="POST">
-                        <button class="fas fa-window-close">Delete Post</button>
-                    </form> 
-                </div>
+                    <div class="name">
+                        <p><%= i.name %></p>
+                    </div>
+                    <div class="number-and-del">
+                        <p><%=i.phone %></p>
+                        <form action="/contacts/<%= i.id %>?_method=DELETE" method="POST">
+                            <button><i class="fas fa-window-close"></i></button>
+                        </form> 
+                    </div>
+                    <!-- <div class="delete-button">
+                        
+                    </div> -->
                 </li>
-                
             <% } %>
         </ul>
     </div>
     <form id="new-contact-form" action="/contacts" method="POST">
-        <input type="text" name="name" placeholder="Enter Name" required>
-        <input type="number" name="phone" placeholder="Enter Phone" required>
-        <button type="submit">Add Contact</button>
+        <input type="text" name="name" maxlength="20" placeholder="Enter Name" required>
+        <input type="number" name="phone" max="999999999999" placeholder="Enter Phone" required>
+        <button type="submit">Add</button>
     </form>
     <script src="/js/home.js"></script>
 

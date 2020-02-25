@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    /* background: #f953c6; 
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  
+    background: linear-gradient(to right, #b91d73, #f953c6); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+#contact-list-container ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.contact, #new-contact-form{
+    /* width: 400px; */
+    /* display: flex;
+    justify-content: center; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    
+    min-width: 200px;
+    width: 450px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.contact{
+    border-bottom: 2px solid white;
+    background-color: #007FFF;
+    color: white;
+    font-size: larger;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.contact:hover{
+    background-color: gray;
+}
+#new-contact-form{
+    width: 460px;
+}
+#new-contact-form input{
+    /* border: none; */
+    border: 0px solid transparent;
+    border-bottom: 2px solid gray;
+    background: transparent;
+    outline-style: none;
+    outline-color: transparent;
+}
+#new-contact-form button{
+    background-color: #1e272c;
+    color: white;
+    font-size: larger;
+    border-style: none;
+}
+.number-and-del p{
+    display: inline;
+    padding-right: 10px;
+}
+.details, .number-and-del form {
+    display: inline;
+}
+#page-heading{
+    margin-top: 25px;
+    color:grey;
+    display: flex;
+    justify-content: center;
+}
+#page-heading i{
+    padding-right: 5px;
+}
